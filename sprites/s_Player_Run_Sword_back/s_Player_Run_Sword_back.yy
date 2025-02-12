@@ -64,7 +64,7 @@
     },
     "name":"s_Player_Run_Sword_back",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":25.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
