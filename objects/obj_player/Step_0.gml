@@ -49,14 +49,10 @@ else {
     } 
 }
 
-if (moveX != 0 || moveY != 0) {
-    if (!place_meeting(x + moveX, y, obj_collision)) {
-        x += moveX;
-    }
-    if (!place_meeting(x, y + moveY, obj_collision)) {
-        y += moveY;
-    }
-} else {
+if (moveX == 0 && moveY == 0) {
     image_index = 0;
     image_speed = 0;
 }
+
+x += moveX;
+y += moveY;
