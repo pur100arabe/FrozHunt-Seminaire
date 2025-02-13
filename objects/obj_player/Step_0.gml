@@ -95,3 +95,34 @@ if (!attacking) {
     x += moveX;
     y += moveY;
 }
+
+if (collision && !collision_handled) {
+
+    if (player_direction == "left") {
+        sprite_index = s_Player_Hurt_left;
+        show_debug_message("Direction: gauche - Sprite: s_Player_Hurt_left");
+    } else if (player_direction == "right") {
+        sprite_index = s_Player_Hurt_right;
+        show_debug_message("Direction: droite - Sprite: s_Player_Hurt_right");
+    } else if (player_direction == "up") {
+        sprite_index = s_Player_Hurt_back;
+        show_debug_message("Direction: haut - Sprite: s_Player_Hurt_back");
+    } else if (player_direction == "down") {
+        sprite_index = s_Player_Hurt_front;
+        show_debug_message("Direction: bas - Sprite: s_Player_Hurt_front");
+    } else {
+        show_debug_message("Direction inconnue !");
+    }
+
+    image_index = 0;
+    image_speed = 1;
+
+    show_debug_message("Animation réinitialisée (image_index = 0, image_speed = 1)");
+
+    collision_handled = true;
+}
+
+
+if (!place_meeting(x, y, obj_orc)) {
+    collision = false; 
+}
