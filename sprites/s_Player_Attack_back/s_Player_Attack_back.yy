@@ -1,9 +1,9 @@
 {
   "$GMSprite":"",
   "%Name":"s_Player_Attack_back",
-  "bboxMode":0,
-  "bbox_bottom":36,
-  "bbox_left":13,
+  "bboxMode":2,
+  "bbox_bottom":32,
+  "bbox_left":16,
   "bbox_right":48,
   "bbox_top":2,
   "collisionKind":1,
