@@ -1,0 +1,1 @@
+instance_create_layer(30, 50, "Instances",obj_barre_sante);
