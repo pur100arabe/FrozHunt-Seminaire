@@ -34,5 +34,5 @@
     "path":"sprites/s_passage_fin/s_passage_fin.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

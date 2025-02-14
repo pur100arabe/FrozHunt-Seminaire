@@ -16,6 +16,7 @@ if (touch_timer >= room_speed * 2) {
 
         if (touch_count >= 6) {
             instance_destroy();
+			room_goto(Gameover)
         }
     }
 }
