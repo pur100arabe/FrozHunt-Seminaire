@@ -6,10 +6,30 @@ if (alarm[0] > 0) {
 var follow_distance = 90;
 var speed_orc = 0.8;
 
+if (!variable_global_exists("global.freeze_cooldown")) {
+    global.freeze_cooldown = 0; // Initialise le cooldown de l'effet de figement
+}
+
+if (!variable_global_exists("global.player_idle_timer")) {
+    global.player_idle_timer = 0; // Initialise le timer du figement
+}
+
+var player_moving = (
+    keyboard_check(vk_left) || keyboard_check(ord("Q")) ||
+    keyboard_check(vk_right) || keyboard_check(ord("D")) ||
+    keyboard_check(vk_up) || keyboard_check(ord("Z")) ||
+    keyboard_check(vk_down) || keyboard_check(ord("S")) ||
+    keyboard_check_pressed(ord("W"))
+);
+
+if (!player_moving) {
+    speed = 0;
+    exit;
+}
+
 if (instance_exists(obj_player)) {
     var dist = point_distance(x, y, obj_player.x, obj_player.y);
 
-    // Déplacement vers le joueur
     if (dist < follow_distance) {
         move_towards_point(obj_player.x, obj_player.y, speed_orc);
     } else {
@@ -23,7 +43,6 @@ if (instance_exists(obj_player)) {
         if (instance_exists(obj_barre_sante)) {
             if (obj_barre_sante.vie < 5) {
                 obj_barre_sante.vie += 1;
-     
             }
         }
     }
@@ -34,5 +53,5 @@ if (is_attacking) {
 
     if (attack_timer <= 0) {
         is_attacking = false;
-	}
+    }
 }
