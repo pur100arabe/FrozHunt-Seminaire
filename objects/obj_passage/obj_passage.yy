@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collision",
-  "eventList":[],
+  "%Name":"obj_passage",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_collision",
+  "name":"obj_passage",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_collision",
-    "path":"sprites/s_collision/s_collision.yy",
+    "name":"s_passage",
+    "path":"sprites/s_passage/s_passage.yy",
   },
   "spriteMaskId":null,
   "visible":false,
