@@ -121,3 +121,5 @@ if (collision && !collision_handled) {
 if (!place_meeting(x, y, obj_orc)) {
     collision = false; 
 }
+
+
