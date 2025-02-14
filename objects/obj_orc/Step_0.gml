@@ -1,4 +1,4 @@
-if (alarm[0] > 0) {
+if (alarm[0] > 1) {
     image_alpha -= 0.033; // Réduit progressivement la transparence (0.033 * 30 ≈ 1)
 }
 
