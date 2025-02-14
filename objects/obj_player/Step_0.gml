@@ -123,4 +123,17 @@ if (!place_meeting(x, y, obj_orc)) {
 }
 
 
+// Vérifier si le joueur bouge ou non
+var player_moving = (
+    keyboard_check(vk_left) || keyboard_check(ord("Q")) ||
+    keyboard_check(vk_right) || keyboard_check(ord("D")) ||
+    keyboard_check(vk_up) || keyboard_check(ord("Z")) ||
+    keyboard_check(vk_down) || keyboard_check(ord("S")) ||
+    keyboard_check_pressed(ord("W")) // Attaque
+);
+
+// Si le joueur NE BOUGE PAS et que `obj_time_stop` n'existe pas encore, on le crée
+if (!player_moving && !instance_exists(obj_time_stop)) {
+    instance_create_layer(x, y, "Instances", obj_time_stop);
+}
 
